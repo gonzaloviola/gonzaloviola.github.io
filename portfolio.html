@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/gonza/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/gonza/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/gonza/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/gonza/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/gonza/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/gonza/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/gonza/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/gonza/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/gonza/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/gonza/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/gonza/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/gonza/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/gonza/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/gonza/favicon/manifest.json">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/gonza/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>Gonzalo Viola | Portfolio</title>
+
+    <script src="https://kit.fontawesome.com/008326ad56.js" crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="fas fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="micv.html">
+                    <span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                    <span class="title">Mi CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="portfolio.html">
+                    <span class="icon"><i class="fas fa-book" aria-hidden="true"></i></span>
+                    <span class="title">Portfolio</span>
+                </a>
+            </li>
+            <!--<li>
+                <a href="contacto.html">
+                    <span class="icon"><i class="fas fa-comment" aria-hidden="true"></i></span>
+                    <span class="title">Contacto</span>
+                </a>
+            </li>-->
+        </ul>
+    </div>
+
+    <div class="portfolio">
+        <ul>
+            <li class="list active" data-filter="todos">Todos</li>
+            <li class="list" data-filter="web">Dise&ntilde;o Web</li>
+            <li class="list" data-filter="uxui">Dise&ntilde;o UX/UI</li>
+            <li class="list" data-filter="emailing">Emailing</li>
+        </ul>
+
+        <div class="product">
+            <div class="itemBox" data-item="web"><a href="http://www.defedesalto.com.ar" target="_blank"><img src="img/imagen1.jpg"></a></div>
+            <div class="itemBox" data-item="web"><a href="http://www.sos-salto.com.ar" target="_blank"><img src="img/imagen2.jpg"></a></div>
+            <div class="itemBox" data-item="uxui"><a href="https://www.behance.net/gallery/133524899/Diseno-UXUI-NotablesApp" target="_blank"><img src="img/imagen3.jpg"></a></div>
+            <div class="itemBox" data-item="emailing"><a href="../emailing-portfolio/videoconferencia-informativa-16-DIC.html" target="_blank"><img src="img/imagen4.jpg"></a></div>
+            <div class="itemBox" data-item="emailing"><a href="../emailing-portfolio/news-negocios-sep-2021.html" target="_blank"><img src="img/imagen5.jpg"></a></div>
+            <div class="itemBox" data-item="uxui"><a href="https://www.behance.net/gallery/147910339/Rediseno-de-App-Telecentro-Play" target="_blank"><img src="img/imagen6.jpg"></a></div>
+            <div class="itemBox" data-item="web"><a href="http://defedesalto.com.ar/cenacentenario/" target="_blank"><img src="img/imagen7.jpg"></a></div>
+            <div class="itemBox" data-item="emailing"><a href="../emailing-portfolio/agenda-webinar-29ag0-2sep-022.html" target="_blank"><img src="img/imagen8.jpg"></a></div>
+            <div class="itemBox" data-item="emailing"><a href="../emailing-portfolio/Jueves-de-Networking-Masterclass-Gestion-de-Carreras-Artisticas-1-9.html" target="_blank"><img src="img/imagen9.jpg"></a></div>
+            <div class="itemBox" data-item="emailing"><a href="../emailing-portfolio/NetworkingDC-creativos-2022.html" target="_blank"><img src="img/imagen10.jpg"></a></div>
+            <div class="itemBox" data-item="emailing"><a href="../emailing-portfolio/webinar-Estrategias-comunicacionales-para-nomades-digitales-1-9.html" target="_blank"><img src="img/imagen11.jpg"></a></div>
+            
+        </div>
+    </div>  
+
+    
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <script type="text/javascript">
+    function toggleMenu(){
+        let navigation = document.querySelector('.navigation');
+        let toggle = document.querySelector('.toggle');
+        navigation.classList.toggle('active');
+        toggle.classList.toggle('active');
+    }
+    </script>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for(let i = 0; i<list.length; i++){
+            list[i].addEventListener('click', function(){
+                for(let j = 0; j<list.length; j++){
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for( let k = 0; k<itemBox.length; k++){
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if(itemBox[k].getAttribute('data-item') == dataFilter || dataFilter == "todos"){
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            })
+        }
+    </script>
+
+</body>
+</html>

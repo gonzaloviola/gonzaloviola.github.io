@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    /*background: #01012c;*/
+    /*background-image: url(http://defedesalto.com.ar/gonza/img/backgroung.jpg);*/
+    background-image: url(./img/wickedbackground.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /*https://fido.palermo.edu/servicios_dyc/flyers/imgs/caba2021.png*/
+}
+.navigation{
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #0f2446;
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 1000;
+}
+.navigation:hover,
+.navigation.active{
+    width: 200px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li:hover{
+    background: #10408d;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    transition: 2s;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;    
+}
+.navigation ul li a .icon .fa{
+    font-size: 24px;  
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #10408d;
+    cursor: pointer;
+}
+.toggle.active{
+    background: #10408d;
+    z-index: 1000;
+}
+.toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+.toggle.active:before{
+    content: '\f00d';
+}
+
+.botones_Home ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+}
+.botones_Home ul li{
+    list-style: none;
+    background: #10408d;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.botones_Home ul li:hover{
+    text-decoration: none;
+    background: #ffffff;
+    color: #10408d;
+}
+.botones_Home ul a{
+    text-decoration: none;
+    color: #fff;
+}
+.botones_Home ul a:hover{
+    text-decoration: none;
+    color: #10408d;
+}
+
+@media (max-width: 767px){
+    .navigation{
+        transition: 0.2s;
+        left: -60px;
+    }
+    .navigation.active{
+        left: 0;
+        width: 100%;
+    }
+    .navigation ul{
+        position: absolute;
+        top: 20%;
+    }
+    .navigation ul li a{
+        text-align: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.home{
+width: 100%;
+height: 800px;
+}
+
+.home h1{
+    color: #fff;
+    font-size: 50pt;
+    margin: auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.home p{
+    color: #fff;
+    font-size: 20pt;
+    margin: auto;
+    text-align: center;
+}
+
+.slash-3 {
+    height: 10px;
+    background-image: linear-gradient(45deg,
+      hsla(0, 0%, 5%, 0),
+      hsla(0, 0%, 5%, 0) 33.33%,
+      rgb(255, 255, 255) 33.33%,
+      rgb(255, 255, 255) 66.67%,
+      hsla(0, 0%, 5%, 0) 66.67%,
+      hsla(0, 0%, 5%, 0) 100%);
+    background-size: 10px 100%;
+    width: 260px;
+    border: none;
+    margin: auto;
+  }
+
+  ::-webkit-scrollbar{
+      width: 10px;
+      background-color: #063656;
+  }
+  ::-webkit-scrollbar-track{
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #063656;
+  }
+  ::-webkit-scrollbar-thumb{
+      background-color: #ffffff; 
+      /*background-image: -webkit-linear-gradient(90deg,rgba(10, 13, 202, 0.2) 100%,transparent 99%,transparent 100%,rgba(10, 13, 202, 0.2) 100%,rgba(10, 13, 202, 0.2) 100%,transparent 100%,transparent)*/
+  }
+
+  /* Estilos de mi cv*/
+
+.micv{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: 1.1fr 2fr;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+.micv .left_Side{
+    position: relative;
+    background-color: #214A82;
+    padding: 40px;
+}
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 40px;
+}
+.title1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul{
+    position: relative;
+}
+
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.formacion li{
+    margin-bottom: 15px;
+}
+.contactInfo.formacion h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.formacion h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.formacion h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo.idioma .text{
+    font-weight: 500;
+}
+
+.contactInfo.idioma .percent{
+    position: relative;
+    display: block;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.micv .right_Side{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+.about{
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company{
+    min-width: 150px;
+}
+.about .box .year_company h5{
+    text-transform: uppercase;
+    margin-right: 20px;
+    color: #73787a;
+    font-weight: 600;
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #02a7da;
+    font-size: 16px;
+}
+
+.skills h4{
+    text-transform: uppercase;
+    color: #02a7da;
+    font-size: 16px;
+}
+.skills ul{
+    display:block;
+}
+.skills ul li{
+    text-transform: uppercase;
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.skills ul li .fas{
+    color: #02a7da;
+    font-size: 18px;
+    width: 30px;
+}
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fas{
+    color: #02a7da;
+    font-size: 18px;
+    width: 20px;
+}
+
+@media (max-width: 1000px){
+    .micv{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year_company{
+        margin-bottom: 5px;
+    }
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+  /*Estilos de Portfolio*/
+
+.portfolio{
+    padding: 100px;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*margin: 40px auto;*/
+}
+
+.portfolio ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.portfolio ul li{
+    list-style: none;
+    background: #10408d;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.portfolio ul li.active{
+    background: #fff;
+    color: black;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product .itemBox{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    display: block;
+}
+.product .itemBox.hide{
+    display: none;
+}
+.product .itemBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+  /* Estilos del formulario de contacto*/
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    width: 100%;
+    /*background: #001923;*/
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+.container h2{
+    width: 100%;
+    text-align: center;
+    color: #052439;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+}
+.container .row100 .col .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #052439;
+}
+.container .row100 .col .inputBox input,
+.container .row100 .col .inputBox textarea{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #fff;
+}
+.container .row100 .col .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus + .text,
+.container .row100 .col .inputBox input:valid + .text,
+.container .row100 .col .inputBox textarea:focus + .text,
+.container .row100 .col .inputBox textarea:valid + .text{
+    top: -35px;
+    left: 0px;
+}
+.container .row100 .col .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #063656;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus ~ .line,
+.container .row100 .col .inputBox input:valid ~ .line{
+    height: 100%;
+}
+
+.container .row100 .col .inputBox .textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.container .row100 .col .inputBox textarea:focus ~ .line,
+.container .row100 .col .inputBox textarea:valid ~ .line{
+    height: 100%;
+}
+
+.container .row100 .col input[type="submit"]{
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: #10408d;;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media (max-width:768px){
+    
+    section{
+        padding: 100px 20px;
+    }    
+    section::before{
+        transform: translate(-200px,-180px);
+    }
+    section::after{
+        transform: translate(220px,180px);
+    }
+    .container{
+        padding: 20px;
+        /*background: rgba(0, 0, 0, 0.15);*/
+        box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+        overflow: hidden;
+        backdrop-filter: blur(20px);
+    }
+    .container h2{
+        font-size: 28px;
+    }
+    .home h1 {
+        color: #fff;
+        font-size: 35pt;
+        margin: auto;
+        text-align: center;
+        padding-top: 180px;
+    }
+}

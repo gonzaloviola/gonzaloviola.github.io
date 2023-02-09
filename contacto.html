@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/gonza/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/gonza/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/gonza/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/gonza/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/gonza/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/gonza/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/gonza/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/gonza/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/gonza/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/gonza/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/gonza/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/gonza/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/gonza/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/gonza/favicon/manifest.json">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/gonza/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>Gonzalo Viola | Contacto</title>
+
+    <script src="https://kit.fontawesome.com/008326ad56.js" crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="fas fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="micv.html">
+                    <span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                    <span class="title">Mi CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="portfolio.html">
+                    <span class="icon"><i class="fas fa-book" aria-hidden="true"></i></span>
+                    <span class="title">Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="contacto.html">
+                    <span class="icon"><i class="fas fa-comment" aria-hidden="true"></i></span>
+                    <span class="title">Contacto</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <section>
+        <div class="container">
+            <h2>Contacto</h2>
+
+        <form method="post">
+        
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input id="nombre" type="text" name="nombre" required="requiered">
+                    <span class="text">Nombre</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input id="apellido" type="text" name="apellido" required="requiered">
+                    <span class="text">Apellido</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input id="email" type="text" name="email" required="requiered">
+                    <span class="text">Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input id="celular" type="text" name="celular" required="requiered">
+                    <span class="text">Celular</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox textarea">
+                    <textarea id="mensaje" name="mensaje" required="requiered"></textarea>
+                    <span class="text">Deja tu mensaje aqui...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row100">
+            <div class="col">
+                <input type="submit" value="Enviar">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </form>
+
+    </section>  
+    
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <script type="text/javascript">
+    function toggleMenu(){
+        let navigation = document.querySelector('.navigation');
+        let toggle = document.querySelector('.toggle');
+        navigation.classList.toggle('active');
+        toggle.classList.toggle('active');
+    }
+    </script>
+
+</body>
+</html>
